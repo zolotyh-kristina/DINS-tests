@@ -33,6 +33,19 @@ testCase('/GET posts', () => {
       });
   });
 
+  testCase('/GET posts/:id', () => {
+    it('it should GET the post with id=1', (done) => {
+      chai.request('https://jsonplaceholder.typicode.com')
+          .get('/posts/1')
+          .end((err, res) => {
+              res.should.have.status(200);
+              //do not output all posts but please make output of few first posts of the received array
+              res.body.should.be.a('object');
+              done();
+          });
+    });
+});
+
 //tests for GET	/posts/:id - please create several tests (7 tests or more)
 
 //tests for POST	/posts - please create few tests (5 tests or more)
