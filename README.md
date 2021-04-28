@@ -1,4 +1,8 @@
 # DINS-tests
+
+## Задание 1
+[Ссылка на тесты](https://github.com/zolotyh-kristina/DINS-tests/blob/master/tests.js)
+
 ## Задание 2
 
 
