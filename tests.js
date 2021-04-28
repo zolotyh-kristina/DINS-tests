@@ -37,7 +37,6 @@ testCase('/GET posts', () => {
             .get('/posts?userId=1')
             .end((err, res) => {
                 res.should.have.status(200);
-                //do not output all posts but please make output of few first posts of the received array
                 res.body.should.be.a('array');
                 done();
             });
@@ -48,7 +47,6 @@ testCase('/GET posts', () => {
             .get('/posts?title=helloworld')
             .end((err, res) => {
                 res.should.have.status(200);
-                //do not output all posts but please make output of few first posts of the received array
                 res.body.should.be.a('array');
                 chai.expect(res.body.length).to.equal(0);
                 done();
@@ -63,7 +61,6 @@ testCase('/GET posts', () => {
           .get('/posts/1')
           .end((err, res) => {
               res.should.have.status(200);
-              //do not output all posts but please make output of few first posts of the received array
               res.body.should.be.a('object');
               done();
           });
