@@ -14,7 +14,7 @@
 #### GET /posts
 ##### Позитивные проверки
 
-Тест-кейс 1
+'Тест-кейс 1'
 
 Окружение: 
 base URL: https://jsonplaceholder.typicode.com
@@ -25,14 +25,16 @@ base URL: https://jsonplaceholder.typicode.com
 
 ОР: 200 ОК
 
-{
-    "userId": "number",
+```[
+  {
+    "userId": 1,
     "id": "number",
     "title": "string",
     "body": "string"
   }
+]```  
 
-Тест-кейс 2
+'Тест-кейс 2'
 
 Окружение: 
 base URL: https://jsonplaceholder.typicode.com
@@ -45,14 +47,14 @@ base URL: https://jsonplaceholder.typicode.com
 
 [
   {
-    "userId": 1,
-    "id": 2,
+    "userId": "number",
+    "id": "number",
     "title": "qui est esse",
-    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    "body": "string"
   }
 ]
 
-Тест-кейс 3
+'Тест-кейс 3'
 
 Окружение: 
 base URL: https://jsonplaceholder.typicode.com
@@ -66,9 +68,9 @@ GET /posts?title=qui%20est%20esse&userId=1
 [
   {
     "userId": 1,
-    "id": 2,
+    "id": "number",
     "title": "qui est esse",
-    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    "body": "string"
   }
 ]
 
@@ -76,12 +78,78 @@ GET /posts?title=qui%20est%20esse&userId=1
 
 ##### Негативные проверки
 
+'Тест-кейс 4'
+
+Окружение: 
+base URL: https://jsonplaceholder.typicode.com
+
 GET /posts?userId=null
+
+1. Отправить запрос методом GET по пути /posts?userId=null
+
+ОР: статус код 404, 
+Тело ответа: `{}`
+
+'Тест-кейс 5'
+
+Окружение: 
+base URL: https://jsonplaceholder.typicode.com
+
 GET /posts?userId=undefined
-GET /posts?userId='''''
+
+1. Отправить запрос методом GET по пути /posts?userId=undefined
+
+ОР: статус код 404,
+Тело ответа: `{}`
+
+'Тест-кейс 6'
+
+Окружение: 
+base URL: https://jsonplaceholder.typicode.com
+
+GET GET /posts?userId='''''
+
+1. Отправить запрос методом GET по пути /posts?userId='''''
+
+ОР: статус код 404,
+Тело ответа: `{}`
+
+'Тест-кейс 7'
+
+Окружение: 
+base URL: https://jsonplaceholder.typicode.com
+
 GET /posts?userId=hello
+
+1. Отправить запрос методом GET по пути /posts?userId=hello
+
+ОР: статус код 404,
+Тело ответа: `{}`
+
+'Тест-кейс 8'
+
+Окружение: 
+base URL: https://jsonplaceholder.typicode.com
+
 GET /posts?userId=-1
+
+1. Отправить запрос методом GET по пути /posts?userId=-1
+
+ОР: статус код 404,
+Тело ответа: `{}`
+
+'Тест-кейс 9'
+
+Окружение: 
+base URL: https://jsonplaceholder.typicode.com
+
 PUT /posts?userId=1
+
+1. Отправить запрос методом PUT по пути /posts?userId=1
+
+ОР: статус код 404
+
+
 
 ## Задание 3
 
