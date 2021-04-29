@@ -25,14 +25,14 @@ base URL: https://jsonplaceholder.typicode.com
 
 ОР: 200 ОК
 
-```[
+[
   {
     "userId": 1,
     "id": "number",
     "title": "string",
     "body": "string"
   }
-]```  
+]
 
 'Тест-кейс 2'
 
