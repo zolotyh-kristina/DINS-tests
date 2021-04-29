@@ -14,7 +14,7 @@
 #### GET /posts
 ##### Позитивные проверки
 
-'Тест-кейс 1'
+*Тест-кейс 1*
 
 Окружение: 
 base URL: https://jsonplaceholder.typicode.com
@@ -34,7 +34,7 @@ base URL: https://jsonplaceholder.typicode.com
   }
 ]
 
-'Тест-кейс 2'
+*Тест-кейс 2*
 
 Окружение: 
 base URL: https://jsonplaceholder.typicode.com
@@ -54,7 +54,7 @@ base URL: https://jsonplaceholder.typicode.com
   }
 ]
 
-'Тест-кейс 3'
+*Тест-кейс 3*
 
 Окружение: 
 base URL: https://jsonplaceholder.typicode.com
@@ -78,7 +78,7 @@ GET /posts?title=qui%20est%20esse&userId=1
 
 ##### Негативные проверки
 
-'Тест-кейс 4'
+*Тест-кейс 4*
 
 Окружение: 
 base URL: https://jsonplaceholder.typicode.com
@@ -90,7 +90,7 @@ GET /posts?userId=null
 ОР: статус код 404, 
 Тело ответа: `{}`
 
-'Тест-кейс 5'
+*Тест-кейс 5*
 
 Окружение: 
 base URL: https://jsonplaceholder.typicode.com
@@ -102,7 +102,7 @@ GET /posts?userId=undefined
 ОР: статус код 404,
 Тело ответа: `{}`
 
-'Тест-кейс 6'
+*Тест-кейс 6*
 
 Окружение: 
 base URL: https://jsonplaceholder.typicode.com
@@ -114,7 +114,7 @@ GET GET /posts?userId='''''
 ОР: статус код 404,
 Тело ответа: `{}`
 
-'Тест-кейс 7'
+*Тест-кейс 7*
 
 Окружение: 
 base URL: https://jsonplaceholder.typicode.com
@@ -126,7 +126,7 @@ GET /posts?userId=hello
 ОР: статус код 404,
 Тело ответа: `{}`
 
-'Тест-кейс 8'
+*Тест-кейс 8*
 
 Окружение: 
 base URL: https://jsonplaceholder.typicode.com
@@ -138,7 +138,7 @@ GET /posts?userId=-1
 ОР: статус код 404,
 Тело ответа: `{}`
 
-'Тест-кейс 9'
+*Тест-кейс 9*
 
 Окружение: 
 base URL: https://jsonplaceholder.typicode.com
@@ -157,6 +157,7 @@ PUT /posts?userId=1
 Эти требования не взаимоисключающие, так как можно вернуть код 404 и тело запроса.
 Предполагаю, что API должно вернуть код 200 и пустой объект.
 
+ID BUG-1
 *GET /posts/101 wrong respouns*
 
 Окружение: 
