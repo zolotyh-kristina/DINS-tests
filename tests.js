@@ -42,7 +42,7 @@ testCase('/GET posts', () => {
             });
       });
 
-      it('it should GET the post with id=1', (done) => {
+      it('it should GET the post with title=helloworld', (done) => {
         chai.request('https://jsonplaceholder.typicode.com')
             .get('/posts?title=helloworld')
             .end((err, res) => {
@@ -56,7 +56,7 @@ testCase('/GET posts', () => {
 
 
   testCase('/GET posts/:id', () => {
-    it('it should GET the post with id=1', (done) => {
+    it('it should GET the first post', (done) => {
       chai.request('https://jsonplaceholder.typicode.com')
           .get('/posts/1')
           .end((err, res) => {
